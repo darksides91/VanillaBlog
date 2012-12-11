@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>VanillaJS</title>
+
+<!-- Adding jQuery -->
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+
+<!-- Adding RequireJS -->
+<script type="text/javascript" src="../js/require.js"></script>
+
+<!-- Adding Bootstrap -->
+<script type="text/javascript" src="../js/bootstrap.js"></script>
+
+<link rel="stylesheet" href='../css/bootstrap.css'></link>
+<link rel="stylesheet" href='../css/bootstrap-responsive.css'></link>
+
+</head>
+<body>
+	<a name='Home'></a>
+    <div class="navbar-wrapper" style='margin-top: 15px;' >
+      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+      <div class="container">
+		
+        <div class="navbar navbar-inverse">
+          <div class="navbar-inner">
+            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="#Home">VanillaJs</a>
+            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li class="active"><a href="#Home">Home</a></li>
+                <li class="dropdown">
+                  <a href="#Tutorials" class="dropdown-toggle" data-toggle="dropdown">Tutorials <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#VanillaJs">VanillaJs</a></li>
+                    <li><a href="#jQuery">jQuery</a></li>
+	                <li class="dropdown drop"><a href="#" class='dropdownmagento dropdown-toggle' >Magento</a>
+	                	<ul class="dropdown-magento">
+	                		<li class='hide' ><a href="#Helper">Helper</a></li>
+	                		<li class='hide' ><a href="#Router">Router</a></li>
+	                	</ul>
+	                </li>
+	                <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="nav-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>
+                <li><a href="#about">Contact</a></li>
+                <li><a href="#contact">About</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div><!-- /.navbar-inner -->
+        </div><!-- /.navbar -->
+
+      </div> <!-- /.container -->
+    </div><!-- /.navbar-wrapper -->
+
+    <div id="myCarousel" class="carousel slide" style='position: relative;'>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="../img/Cali_colour.jpg" alt="" style=' width: 100%; height: 650px'>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Example headline.</h1>
+              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="../img/Classics_colour.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Another example headline.</h1>
+              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <a class="btn btn-large btn-primary" href="#">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="../img/LXVI_colour.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>One more for good measure.</h1>
+              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <a class="btn btn-large btn-primary" href="#">Browse gallery</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div><!-- /.carousel -->
+	
+	<script type='text/javascript'>
+		$('.dropdownmagento').click(function(event) {
+			event.stopPropagation();
+			$('.drop ul > li').toggle();
+		});	
+		
+		$('.drop ul > li').click(function(event) {
+			$('.drop ul > li').toggle();
+		});
+	</script>
+
+</body>
+</html>
