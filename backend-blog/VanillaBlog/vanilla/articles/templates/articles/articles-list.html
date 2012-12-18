@@ -1,0 +1,10 @@
+<section id='articles-list'> 
+    <ul>    
+    {% for article in object_list %}
+        <li>
+            <h1>{{ article.title }}</h1>
+            <p>{{ article.content }}</p>
+            <p>{{ article.author }}</p>
+        </li>
+    {% endfor %}
+</section>

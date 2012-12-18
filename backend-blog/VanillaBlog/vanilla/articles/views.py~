@@ -1,0 +1,7 @@
+from django.views.generic import TemplateView
+from vanilla.articles.models import Article
+
+class ArticlesView(TemplateView):
+
+    template_name = "articles/articles-list.html"
+    model = Article
